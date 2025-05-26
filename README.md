@@ -17,21 +17,15 @@ This project investigates the reliability of the COMET evaluation metric when ap
 
 ## Codes in the folder
 
-API_Gemini.ipynb
+**API_Gemini.ipynb**
 This notebook contains the code used to generate automatic translation outputs using the Gemini translation system.
 
-Comet_WholeDataset_Gemini.ipynb
+**Comet_WholeDataset_Gemini.ipynb**
 Computes COMET scores for all 3,000 segments in the dataset based on the Gemini translations.
 
-Distribution_Human_COMET.ipynb
+**Distribution_Human_COMET.ipynb**
 Compares the distribution of COMET scores and human annotations. Includes visualizations for qualitative analysis.
 
-Normalization_Fluency_Accuracy.ipynb
+**Normalization_Fluency_Accuracy.ipynb**
 Performs normalization of human evaluation scores (fluency and accuracy) to make them compatible with COMET's scoring range, enabling direct comparison.
 
-1. We used the COMET model (`Unbabel/wmt22-comet-da`) to score all 3,000 translation segments.
-2. A randomly selected subset of 140 segments was annotated by a human evaluator using a scoring scale aligned with COMET’s.
-3. We then compared COMET scores with human scores using a ±0.2 threshold to identify:
-   - **Equal**: Minor differences (within the threshold)
-   - **Overestimation**: COMET scores significantly higher than human scores
-   - **Underestimation**: COMET scores significantly lower than human scores
