@@ -1,5 +1,4 @@
-# COMET Evaluation Reliability Study on Catalan WMT2013 MT Test Set
-
+# COMET Evaluation on Catalan 
 ## Overview
 
 This project investigates the reliability of the COMET evaluation metric when applied to a machine translation dataset. Specifically, we infer COMET scores on the **Catalan WMT2013 Machine Translation Shared Task Test Set**, which contains **3,000 translation segments**. Our goal is to assess whether COMET scores align closely with human judgments, thereby validating its effectiveness for Catalan-English translation evaluation.
@@ -16,7 +15,19 @@ This project investigates the reliability of the COMET evaluation metric when ap
 - **Size**: 3,000 segments
 - **Subset for human annotation**: 140 segments manually scored by a human annotator
 
-## Methodology
+## Codes in the folder
+
+API_Gemini.ipynb
+This notebook contains the code used to generate automatic translation outputs using the Gemini translation system.
+
+Comet_WholeDataset_Gemini.ipynb
+Computes COMET scores for all 3,000 segments in the dataset based on the Gemini translations.
+
+Distribution_Human_COMET.ipynb
+Compares the distribution of COMET scores and human annotations. Includes visualizations for qualitative analysis.
+
+Normalization_Fluency_Accuracy.ipynb
+Performs normalization of human evaluation scores (fluency and accuracy) to make them compatible with COMET's scoring range, enabling direct comparison.
 
 1. We used the COMET model (`Unbabel/wmt22-comet-da`) to score all 3,000 translation segments.
 2. A randomly selected subset of 140 segments was annotated by a human evaluator using a scoring scale aligned with COMET’s.
